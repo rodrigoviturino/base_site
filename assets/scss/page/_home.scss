@@ -1,0 +1,645 @@
+// #f6f9fc;
+// #444;
+// #132e58;
+// #461f52;
+// #0285c9;
+// #041f8f;
+// #84888c
+
+// Section - Introduction
+.introduction {
+  margin-bottom: map-get($spacers, 4);
+  @include media-breakpoint-only(xs) {
+    margin-bottom: 2rem;
+  }
+
+  &__wrapper {
+    align-items: center;
+
+    &__columnLeft {
+      @include media-breakpoint-only(xs) {
+        order: 2;
+      }
+      &__block-title {
+        h1 {
+          font-weight: normal;
+          color: #041f8f;
+          margin-bottom: map-get($spacers, 3);
+          @include responsive-font-size(42px);
+          @include media-breakpoint-only(xs) {
+            margin-top: map-get($spacers, 3);
+            @include responsive-font-size(32px);
+          }
+        }
+        p {
+          color: #84888c;
+          line-height: 26px;
+          font-weight: normal;
+          @include responsive-font-size(16px);
+        }
+        // .btn-blue {
+        //   display: inline-block;
+        //   background-color: #0285c9;
+        //   // border-radius: 5px;
+        //   padding: 13px 32px;
+        //   color: $white;
+        //   font-weight: $font-weight-bold;
+        //   text-transform: uppercase;
+        //   margin: map-get($spacers, 2) 0;
+        //   @include responsive-font-size(16px);
+        // }
+
+        span {
+          display: block;
+          font-weight: $font-weight-normal;
+          color: #0285c9;
+          @include media-breakpoint-only(xs) {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &__columnRight {
+      @include media-breakpoint-only(xs) {
+        order: 1;
+      }
+    }
+  }
+}
+
+// Sessão - Control Spending - Modal
+.control-spending {
+  margin-bottom: 136px;
+  @include media-breakpoint-only(xs) {
+    margin-bottom: map-get($spacers, 4);
+  }
+
+  &__wrapper {
+    align-items: center;
+
+    &__columnLeft {
+      @include media-breakpoint-only(xs) {
+        margin-bottom: map-get($spacers, 5);
+      }
+      .box-card {
+        img {
+          border-radius: 10px;
+        }
+      }
+    }
+
+    &__columnRight {
+      .block-title {
+        h2 {
+          color: #303d63;
+          padding-bottom: map-get($spacers, 3);
+          width: 82%;
+          @include responsive-font-size(32px);
+
+          @include media-breakpoint-only(xs) {
+            width: 100%;
+            padding-bottom: map-get($spacers, 4);
+            @include responsive-font-size(30px);
+          }
+        }
+        p {
+          color: #84888c;
+          line-height: 26px;
+          @include responsive-font-size(16px);
+        }
+        .test {
+          text-transform: uppercase;
+          color: #0285c9;
+          font-weight: $font-weight-bold;
+          @include responsive-font-size(18px);
+
+          &:after {
+            content: "\2192";
+            color: #0285c9;
+            display: inline-block;
+            @include responsive-font-size(35px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modal
+.box-modal {
+  z-index: 3;
+  display: none;
+  padding-top: 30px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+
+  &__wrapper {
+    &__header {
+      color: $white;
+      text-align: right;
+      cursor: pointer;
+      padding: 10px;
+      @include responsive-font-size(30px);
+    }
+    &__body {
+    }
+  }
+}
+
+// CTA - Organize Refunds
+.organize-refunds {
+  background-color: #0285c9;
+  border-radius: 15px;
+  padding: 50px 0 65px;
+  margin: 0 60px 80px;
+  position: relative;
+
+  @include media-breakpoint-only(xs) {
+    margin: 0;
+    border-radius: 0;
+    padding-top: map-get($spacers, 3);
+    padding-bottom: 23.45rem;
+  }
+
+  &__wrapper {
+    align-items: center;
+
+    .columnLeft {
+      // padding: 10px 0 60px;
+
+      .block-title {
+        color: $white;
+        h2 {
+          line-height: 40px;
+          font-weight: $font-weight-normal;
+          padding-right: map-get($spacers, 5);
+          @include responsive-font-size(32px);
+
+          @include media-breakpoint-only(xs) {
+            padding: map-get($spacers, 0);
+            @include responsive-font-size(32px);
+          }
+        }
+        p {
+          line-height: 26px;
+          padding: map-get($spacers, 3) 0;
+          @include responsive-font-size(16px);
+
+          @include media-breakpoint-only(xs) {
+            font-weight: $font-weight-normal;
+            padding-bottom: map-get($spacers, 0);
+          }
+        }
+
+        .btn-blue-dark {
+          @include media-breakpoint-only(xs) {
+            background-color: transparent;
+            padding: map-get($spacers, 0);
+            display: block;
+            text-align: left;
+            margin: map-get($spacers, 0);
+
+            &:after {
+              content: "\2192";
+              display: inline-block;
+              color: $white;
+              @include responsive-font-size(35px);
+            }
+          }
+        }
+      }
+    }
+    .columnRight {
+      .img {
+        position: absolute;
+        top: -369px;
+        right: 0;
+        bottom: 0;
+
+        @include media-breakpoint-only(xs) {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+// More Services
+.more-services {
+  background-color: #f6f9fc;
+  margin: 0 60px;
+  border-radius: 15px;
+  padding-bottom: map-get($spacers, 5);
+  @include media-breakpoint-only(xs) {
+    margin: map-get($spacers, 0);
+  }
+
+  &-block-title {
+    text-align: center;
+    padding: 80px 0;
+    @include media-breakpoint-only(xs) {
+      padding: map-get($spacers, 5) 0 map-get($spacers, 3);
+    }
+
+    h2 {
+      color: #041f8f;
+      @include responsive-font-size(32px);
+
+      @include media-breakpoint-only(xs) {
+        margin-bottom: map-get($spacers, 4);
+      }
+    }
+
+    p {
+      color: #84888c;
+      width: 60%;
+      margin: map-get($spacers, 3) auto;
+      line-height: 28px;
+      @include responsive-font-size(16px);
+
+      @include media-breakpoint-only(xs) {
+        margin: map-get($spacers, 0);
+        width: 100%;
+      }
+    }
+  }
+
+  &__wrapper {
+    &__card {
+      text-align: center;
+
+      &:first-child {
+        margin-bottom: map-get($spacers, 5);
+      }
+
+      &:nth-child(2) {
+        margin-bottom: map-get($spacers, 5);
+      }
+
+      &:nth-child(3) {
+        margin-bottom: map-get($spacers, 5);
+      }
+
+      .img {
+        display: inline-block;
+        margin-bottom: map-get($spacers, 4);
+      }
+
+      h3 {
+        line-height: 28px;
+        color: #303d63;
+        width: 85%;
+        margin: 0 auto map-get($spacers, 3);
+        font-weight: $font-weight-bold;
+        @include responsive-font-size(24px);
+      }
+
+      p {
+        color: #84888c;
+        line-height: 26px;
+        padding: 0 10px;
+        @include responsive-font-size(16px);
+      }
+    }
+  }
+}
+
+// Customers
+.customers {
+  padding: 80px 0;
+  @include media-breakpoint-only(xs) {
+    padding: map-get($spacers, 4) 0 map-get($spacers, 5);
+  }
+
+  &__wrapper {
+    align-items: center;
+    &__columnLeft {
+      @include media-breakpoint-only(xs) {
+        order: 2;
+      }
+      .wrapper {
+        align-items: center;
+        align-self: center;
+
+        .item {
+          &:first-child {
+            margin-bottom: 30px;
+          }
+          &:nth-child(2) {
+            margin-bottom: 30px;
+          }
+          &-img {
+            display: block;
+            // padding: map-get($spacers, 4) map-get($spacers, 5);
+            border: solid 2px #f6f9fc;
+            border-radius: 20px;
+            height: 145px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include media-breakpoint-only(xs) {
+              height: 83px;
+              padding: map-get($spacers, 3);
+            }
+          }
+        }
+      }
+    }
+    &__columnRight {
+      @include media-breakpoint-only(xs) {
+        order: 1;
+      }
+      .block-title {
+        padding: 0 map-get($spacers, 4);
+        @include media-breakpoint-only(xs) {
+          padding: map-get($spacers, 0);
+          margin-bottom: map-get($spacers, 4);
+        }
+        h2 {
+          color: #303d63;
+          font-weight: $font-weight-normal;
+          margin-bottom: map-get($spacers, 3);
+          @include responsive-font-size(32px);
+          @include media-breakpoint-only(xs) {
+            padding: 0 map-get($spacers, 2) 0;
+          }
+        }
+
+        p {
+          color: #84888c;
+          font-weight: $font-weight-normal;
+          line-height: 26px;
+          @include responsive-font-size(16px);
+          @include media-breakpoint-only(xs) {
+            padding: 0 map-get($spacers, 2) 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Payment
+.payment {
+  margin-bottom: 70px;
+  @include media-breakpoint-only(xs) {
+    margin-bottom: map-get($spacers, 5);
+  }
+  &__block-title {
+    text-align: center;
+    margin-bottom: map-get($spacers, 5);
+    @include media-breakpoint-only(xs) {
+      margin-bottom: map-get($spacers, 3);
+    }
+
+    h2 {
+      color: #303d63;
+      margin-bottom: map-get($spacers, 3);
+      font-weight: $font-weight-normal;
+      @include responsive-font-size(32px);
+    }
+    p {
+      font-weight: $font-weight-normal;
+      color: #84888c;
+      line-height: 28px;
+      width: 73%;
+      margin: 0 auto;
+      @include responsive-font-size(16px);
+
+      @include media-breakpoint-only(xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__columnLeft {
+    text-align: center;
+    border: none;
+    border-right: solid 1px #dbdbdb;
+
+    @include media-breakpoint-only(xs) {
+      border: none;
+      border-bottom: solid 1px #dbdbdb;
+      margin-bottom: map-get($spacers, 5);
+    }
+
+    .img {
+      display: inline-block;
+      margin-bottom: map-get($spacers, 3);
+    }
+
+    h3 {
+      color: #84888c;
+      line-height: 28px;
+      font-weight: 500;
+      padding-bottom: map-get($spacers, 4);
+      @include responsive-font-size(32px);
+      @include media-breakpoint-only(xs) {
+        font-weight: $font-weight-bold;
+        @include responsive-font-size(24px);
+      }
+    }
+    ul {
+      li {
+        color: #84888c;
+        padding-bottom: map-get($spacers, 3);
+        font-weight: $font-weight-normal;
+        line-height: 28px;
+        @include responsive-font-size(18px);
+
+        @include media-breakpoint-only(xs) {
+          @include responsive-font-size(16px);
+        }
+      }
+    }
+  }
+
+  &__columnRight {
+    text-align: center;
+
+    .img {
+      display: inline-block;
+      margin-bottom: map-get($spacers, 3);
+    }
+
+    h3 {
+      color: #303d63;
+      line-height: 28px;
+      font-weight: $font-weight-bold;
+      padding-bottom: map-get($spacers, 4);
+      @include responsive-font-size(32px);
+
+      @include media-breakpoint-only(xs) {
+        @include responsive-font-size(24px);
+      }
+    }
+    ul {
+      li {
+        color: #303d63;
+        padding-bottom: map-get($spacers, 3);
+        font-weight: $font-weight-bold;
+        line-height: 28px;
+        @include responsive-font-size(18px);
+
+        @include media-breakpoint-only(xs) {
+          line-height: 28px;
+          @include responsive-font-size(14px);
+        }
+      }
+    }
+  }
+}
+
+// Call to Action
+.cta {
+  background-image: url("assets/images/icons/bg-cta.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
+  margin: 0 60px map-get($spacers, 5);
+  border-radius: 15px;
+
+  @include media-breakpoint-only(xs) {
+    margin: map-get($spacers, 0);
+    border-radius: 0;
+    padding: map-get($spacers, 5) 0 map-get($spacers, 4);
+  }
+
+  &__block-title {
+    text-align: center;
+
+    h2 {
+      color: $white;
+      font-weight: $font-weight-bold;
+      padding-bottom: map-get($spacers, 2);
+      @include responsive-font-size(32px);
+
+      @include media-breakpoint-only(xs) {
+        line-height: 137%;
+        padding-bottom: map-get($spacers, 4);
+        @include responsive-font-size(30px);
+      }
+    }
+    p {
+      color: $white;
+      font-weight: $font-weight-normal;
+      padding-bottom: map-get($spacers, 5);
+      @include responsive-font-size(16px);
+
+      @include media-breakpoint-only(xs) {
+        line-height: 28px;
+        padding-bottom: map-get($spacers, 4);
+      }
+    }
+    .btn-blue {
+      display: inline-block;
+      margin: 0 auto map-get($spacers, 4);
+      text-align: center;
+      @include media-breakpoint-only(xs) {
+        margin-bottom: map-get($spacers, 2);
+      }
+    }
+    span {
+      color: $white;
+      display: block;
+      line-height: 28px;
+      @include responsive-font-size(14px);
+    }
+  }
+}
+
+// Blog
+.blog {
+  margin-bottom: map-get($spacers, 5);
+
+  @include media-breakpoint-only(xs) {
+    padding-top: map-get($spacers, 5);
+    margin-bottom: map-get($spacers, 4);
+  }
+
+  &-title {
+    line-height: 32px;
+    color: #041f8f;
+    padding-bottom: map-get($spacers, 5);
+    font-weight: $font-weight-bold;
+    @include responsive-font-size(32px);
+    @include media-breakpoint-only(xs) {
+      padding-bottom: map-get($spacers, 5);
+    }
+  }
+  &__wrapper {
+    align-items: center;
+    &__card {
+      @include media-breakpoint-only(xs) {
+        margin-bottom: map-get($spacers, 3);
+      }
+      &__overlay {
+        position: relative;
+        bottom: 0;
+        .block-title {
+          text-transform: uppercase;
+          position: absolute;
+          bottom: 30px;
+          left: 22px;
+          color: $white;
+          line-height: 16px;
+          font-weight: $font-weight-bold;
+          @include responsive-font-size(16px);
+        }
+      }
+    }
+  }
+}
+
+// Feedback
+.feedback {
+  margin-bottom: 60px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .title {
+      font-weight: $font-weight-normal;
+      color: #303d63;
+      @include responsive-font-size(32px);
+      @include media-breakpoint-only(xs) {
+        font-weight: $font-weight-bold;
+        margin-bottom: map-get($spacers, 4);
+        @include responsive-font-size(30px);
+      }
+    }
+
+    &__evaluation-list {
+      display: flex;
+      align-items: center;
+      @include media-breakpoint-only(xs) {
+        justify-content: center;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          &:nth-child(1n + 1) {
+            margin-left: map-get($spacers, 3);
+          }
+        }
+      }
+    }
+  }
+}
+
+// Modal
+.modal {
+}
